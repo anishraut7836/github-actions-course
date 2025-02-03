@@ -1,0 +1,10 @@
+name: Github action demo pipeline
+run-name: ${{ github.actor }}
+on: [push]
+jobs:
+    Running-first-github-actions-demo:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Job auto trigger by ${{ github.event_name }}"
+            - run: echo :Job running on a ${{ runner.os }}
+            
